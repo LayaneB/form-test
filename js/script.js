@@ -1,3 +1,6 @@
+let today = new Date().toISOString().split("T")[0];
+document.getElementById("event-day").setAttribute("min", today);
+
 let form = document.getElementById("form")
 let submit = document.getElementById("btn")
 
@@ -7,21 +10,21 @@ let inputsArray = [...inputs]
 const spans = form.getElementsByTagName('span')
 let spansArray = [...spans]
 
-let valid =[]
+let valid = []
 
 submit.addEventListener('click', function (e) {
     e.preventDefault();
-    
+
     inputsArray.forEach((input, index) => {
         validator(input, index)
     });
 
-    onSuccess = function (token) {
+    onSuccess = function () {
 
         try {
             const isValid = valid.findIndex(element => !element)
             if (isValid >= 0) {
-                throw new Error("Parâmetros faltantes na chamada.")
+                throw new Error("Por favor, preencha todos os campos corretamente para enviar seu formulário.")
             }
             alert("Informações enviadas com sucesso.")
         } catch (error) {
@@ -34,9 +37,8 @@ submit.addEventListener('click', function (e) {
         alert(`Error ${errorCode}: ${message}`);
     };
 
-    ReCAPTCHAv3UtilsRequest('submit', onSuccess, onError);
+    ReCaptchav3UtilsRequest('submit', onSuccess, onError);
 })
-
 
 inputsArray.forEach((input, index) => {
     input.addEventListener('change', function (e) {
@@ -52,9 +54,9 @@ validator = (input, index) => {
     if (input.value !== "" && input.type === "email") {
         validateEmail(input, index)
     }
-    if(input.value !== "" && input.id.includes("cnpj")){
+    if (input.value !== "" && input.id.includes("cnpj")) {
         validateCNPJ(input, index)
-    }  
+    }
 };
 
 required = (input, index) => {
@@ -63,10 +65,10 @@ required = (input, index) => {
         const errorMessage = '<i class="fa fa-info-circle"></i> Campo Obrigatório*';
         input.style.borderColor = "rgba(243, 10, 10, 0.375)";
         this.printMessage(index, errorMessage);
-        valid[index]=false
+        valid[index] = false
     } else {
         this.cleanValidations(input, index);
-        valid[index]=true
+        valid[index] = true
     }
 };
 
@@ -79,10 +81,10 @@ validateEmail = (input, index) => {
         const errorMessage = `<i class="fa fa-info-circle"></i> Digite um e-mail válido*`;
         input.style.borderColor = "rgba(243, 10, 10, 0.375)";
         this.printMessage(index, errorMessage);
-        valid[index]=false;
+        valid[index] = false;
     } else {
         this.cleanValidations(input, index);
-        valid[index]=true;
+        valid[index] = true;
     }
 
 };
@@ -96,16 +98,13 @@ validateCNPJ = (input, index) => {
         const errorMessage = `<i class="fa fa-info-circle"></i> Digite um CNPJ válido*`;
         input.style.borderColor = "rgba(243, 10, 10, 0.375)";
         this.printMessage(index, errorMessage);
-        valid[index]=false;
+        valid[index] = false;
     } else {
         this.cleanValidations(input, index);
-        valid[index]=true;
+        valid[index] = true;
     }
 };
 
-validateDate = () => {
-
-}
 printMessage = (index, message) => {
     spansArray[index].innerHTML = message;
 };
@@ -115,7 +114,7 @@ cleanValidations = (input, index) => {
     spansArray[index].innerHTML = "";
 };
 
-ReCAPTCHAv3UtilsRequest = function (action, onSuccess, onError) {
+ReCaptchav3UtilsRequest = function (action, onSuccess, onError) {
     const PUBLIC_KEY = '6LeQdPEgAAAAAKusWKDghRm1uHSf2SldxBHo0RlK';
 
     if (window.grecaptcha) {
@@ -129,7 +128,7 @@ ReCAPTCHAv3UtilsRequest = function (action, onSuccess, onError) {
                     query.then(onSuccess);
                 }
             } catch (e) {
-                var message = e && e.message || 'Captcha request error.';
+                var message = e && e.message || 'Erro na requisição.';
                 if (onError) {
                     onError(450, message);
                 }
@@ -137,7 +136,7 @@ ReCAPTCHAv3UtilsRequest = function (action, onSuccess, onError) {
         });
     } else {
         if (onError) {
-            onError(131, 'reCAPTCHA v3 is not loaded correctly.');
+            onError(131, 'reCAPTCHA v3 não carregou corretamente.');
         }
     }
 };
