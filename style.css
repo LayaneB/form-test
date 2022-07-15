@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+}
+
+
+#form {
+    max-width: 80vw !important;
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1.6rem;
+}
+
+.input-form {
+    border: 1px solid rgba(0, 31, 63, 0.3);
+    padding: .825rem 1.1875rem;
+    border-radius: .3rem;
+    outline: none;
+}
+
+.input-form:focus {
+    border-color: #555;
+}
+
+.input-form:hover {
+    border-color: #555;
+}
+
+.input-container {
+    display: inline-flex;
+    flex-direction: column;
+    gap: .3rem
+}
+
+.long {
+    width: 66%;
+}
+
+.half {
+    width: 48%;
+}
+
+.short {
+    width: 30%;
+}
+
+.full {
+    width: 100%;
+}
+
+.main-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3rem 0;
+}
+
+h4 {
+    width: 100%;
+}
+
+.label-form {
+    font-weight: 600;
+    font-size: .9rem;
+    margin-bottom: .8rem;
+}
+
+#btn {
+    display: inline-block;
+    align-self: center;
+    outline: none;
+    border: none;
+    color: #000a31;
+    background-color: #00fbe2;
+    /* border-color: #00fbe2; */
+    text-align: center;
+    cursor: pointer;
+    padding: 0.825rem 0;
+    font-size: 1.125rem;
+    border-radius: 1.5625rem;
+    font-weight: 700;
+    width: 30%;
+    margin: auto;
+}
+
+#btn:hover{
+    background-color: #02d6c1;
+    /* border-color: #02d6c1; */
+    font-weight: bold;
+}
+
+.error-message{
+    color:red;
+    font-size: .7rem;
+    display: block;
+    position: absolute;
+}
+
+@media screen and (max-device-width : 800px){
+    .long, .half, .short {
+        width: 100%;
+        color:rgba(243, 10, 10, 0.375)
+    }
+    #btn{
+        width: 100%;
+    }
+}

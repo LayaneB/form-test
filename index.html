@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://recaptcha.net/recaptcha/api.js?render=6LeQdPEgAAAAAKusWKDghRm1uHSf2SldxBHo0RlK"></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="main-container">
+
+        <form id="form">
+            <h1>
+                FORMULÁRIO
+                <hr />
+            </h1>
+            <div class="flex general-information">
+                <div class="input-container long">
+                    <label for="company-name" class="label-form">
+                        Nome da empresa
+                        <span class="error-message"></span>
+                    </label>
+                    <input class="input-form" name="company-name" id="company-name" placeholder="Nome da empresa"
+                        type="text" required />
+                </div>
+
+                <div class="input-container short">
+                    <label for="company-cnpj" class="label-form">
+                        CNPJ
+                        <span class="error-message"></span>
+                    </label>
+                    <input class="input-form" name="company-cnpj" id="company-cnpj" placeholder="XX. XXX. XXX/0001-XX"
+                        type="text" required />
+                </div>
+
+                <div class="input-container half">
+                    <label for="business-name" class="label-form">
+                        Nome Comercial
+                        <span class="error-message"></span>
+                    </label>
+                    <input class="input-form" name="business-name" id="business-name" placeholder="Nome Comercial"
+                        type="text" required />
+                </div>
+
+                <div class="input-container half">
+                    <label for="business-email" class="label-form">
+                        Email Comercial
+                        <span class="error-message" id="business-email"></span>
+                    </label>
+                    <input class="input-form" name="business-email" id="business-email" placeholder="Email Comercial"
+                        type="email" required />
+                </div>
+
+                <div class="input-container half">
+                    <label for="financial-name" class="label-form">
+                        Responsável Setor Financeiro
+                        <span class="error-message" id="company-name"></span>
+                    </label>
+                    <input class="input-form" name="financial-name" id="financial-name" placeholder="Nome do responsável pelo setor financeiro"
+                        type="text" required />
+                </div>
+
+                <div class="input-container half">
+                    <label for="financial-email" class="label-form">
+                        Email Financeiro
+                        <span class="error-message" id="company-name"></span>
+                    </label>
+                    <input class="input-form" name="financial-email" id="financial-email" placeholder="Email Financeiro"
+                        type="email" required />
+                </div>
+
+                <div class="input-container half">
+                    <label for="business-phone" class="label-form">
+                        Telefone Comercial
+                        <span class="error-message" id="company-name"></span>
+                    </label>
+                    <input class="input-form" name="business-phone" id="business-phone" placeholder="Telefone Comercial"
+                        type="tel" required />
+                </div>
+
+                <div class="input-container half">
+                    <label for="financial-phone" class="label-form">
+                        Telefone Financeiro
+                        <span class="error-message" id="company-name"></span>
+                    </label>
+                    <input class="input-form" name="financial-phone" id="financial-phone"
+                        placeholder="Telefone Financeiro" type="tel" required />
+                </div>
+
+                <div class="input-container full">
+                    <label for="contract" class="label-form">
+                        Contrato
+                        <span class="error-message" id="company-name"></span>
+                    </label>
+                    <input class="input-form" name="contract" id="contract" placeholder="Contrato" type="text"
+                        required />
+                </div>
+
+                <div class="input-container long">
+                    <label for="address" class="label-form">
+                        Endereço
+                        <span class="error-message" id="company-name"></span>
+                    </label>
+                    <input class="input-form" name="address" id="address" placeholder="Endereço" type="text" required />
+                </div>
+
+                <div class="input-container short">
+                    <label for="address-number" class="label-form">
+                        Número
+                        <span class="error-message" id="company-name"></span>
+                    </label>
+                    <input class="input-form" name="address-number" id="address-number" placeholder="Número" type="text"
+                        required />
+                </div>
+
+                <div class="input-container short">
+                    <label for="city" class="label-form">
+                        Cidade
+                        <span class="error-message" id="company-name"></span>
+                    </label>
+                    <input class="input-form" name="city" id="city" placeholder="Cidade" type="text" required />
+                </div>
+
+                <div class="input-container short">
+                    <label for="state" class="label-form">
+                        Estado
+                        <span class="error-message" id="company-name"></span>
+                    </label>
+                    <input class="input-form" name="state" id="state" placeholder="Estado" type="text" required />
+                </div>
+
+                <div class="input-container short">
+                    <label for="country" class="label-form">
+                        País
+                        <span class="error-message" id="company-name"></span>
+                    </label>
+                    <input class="input-form" name="country" id="country" placeholder="País" type="text" required />
+                </div>
+
+                <div class="input-container short">
+                    <label for="zip-code" class="label-form">
+                        CEP
+                        <span class="error-message" id="company-name"></span>
+                    </label>
+                    <input class="input-form" name="zip-code" id="zip-code" placeholder="CEP" type="text" required />
+                </div>
+
+                <div class="input-container short">
+                    <label for="time-day-initial" class="label-form">
+                        Horário Inicial
+                        <span class="error-message" id="company-name"></span>
+                    </label>
+                    <input class="input-form" name="time-day-initial" id="time-day-initial" type="time" required />
+                </div>
+
+                <div class="input-container short">
+                    <label for="time-day-final" class="label-form">
+                        Horário Final
+                        <span class="error-message" id="company-name"></span>
+                    </label>
+                    <input class="input-form" name="time-day-final" id="time-day-final" type="time" required />
+                </div>
+
+                <div class="input-container half">
+                    <label for="event-day" class="label-form">
+                        Data do evento
+                        <span class="error-message" id="company-name"></span>
+                    </label>
+                    <input class="input-form" name="event-day" type="date" id="event-day" required />
+                </div>
+
+                <div class="input-container half">
+                    <label for="qty-Guest" class="label-form">
+                        Quantidade de Convidados
+                        <span class="error-message" id="company-name"></span>
+                    </label>
+                    <input class="input-form" name="qty-Guest" id="qty-Guest" placeholder="Quantidade de Convidados"
+                        type="number" required />
+                </div>
+
+                <section class="flex">
+                    <h4>
+                        Informações de Pagamento
+                        <hr />
+                    </h4>
+
+                    <div class="input-container half">
+                        <label for="pay-company-name" class="label-form">
+                            Nome da empresa
+                            <span class="error-message" id="company-name"></span>
+                        </label>
+                        <input class="input-form" name="pay-company-name" id="pay-company-name"
+                            placeholder="Nome da empresa" type="text" />
+                    </div>
+
+                    <div class="input-container half">
+                        <label for="pay-email" class="label-form">
+                            Email
+                            <span class="error-message" id="company-name"></span>
+                        </label>
+                        <input class="input-form" name="pay-email" id="pay-email" placeholder="Email" type="email" />
+                    </div>
+
+                    <div class="input-container short">
+                        <label for="pay-company-cnpj" class="label-form">
+                            CNPJ
+                            <span class="error-message" id="company-name"></span>
+                        </label>
+                        <input class="input-form" name="pay-company-cnpj" id="pay-company-cnpj" placeholder="CNPJ"
+                            type="text" />
+                    </div>
+
+                    <div class="input-container long">
+                        <label for="pay-contract-email" class="label-form">
+                            Email de contrato
+                            <span class="error-message" id="company-name"></span>
+                        </label>
+                        <input class="input-form" name="pay-contract-email" id="pay-contract-email"
+                            placeholder="Email de contrato" type="email" />
+                    </div>
+
+                    <div class="input-container full">
+                        <label for="contract-name" class="label-form">
+                            Contrato
+                            <span class="error-message" id="company-name"></span>
+                        </label>
+                        <input class="input-form" name="contract-name" id="contract-name" placeholder="Contrato"
+                            type="text" />
+                    </div>
+
+                    <div class="input-container full">
+                        <label for="general-observations" class="label-form">
+                            Observações Gerais
+                            <span class="error-message" id="company-name"></span>
+                        </label>
+                        <textarea class="input-form" name="general-observations" id="general-observations"
+                            placeholder="Observações Gerais" type="text"></textarea>
+                    </div>
+                </section>
+                <input type="submit" id="btn" value="Enviar">
+            </div>
+        </form>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
