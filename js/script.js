@@ -20,17 +20,16 @@ submit.addEventListener('click', function (e) {
     });
 
     onSuccess = function () {
-
         try {
-            const isValid = valid.findIndex(element => !element)
+            const isValid = valid.findIndex(element => !element);
             if (isValid >= 0) {
-                throw new Error("Por favor, preencha todos os campos corretamente para enviar seu formulário.")
+                throw new Error("Por favor, preencha todos os campos corretamente para enviar seu formulário.");
             }
-            alert("Informações enviadas com sucesso.")
+            
+            alert("Informações enviadas com sucesso.");
         } catch (error) {
-            this.onError(999999, error.message)
+            this.onError(999999, error.message);
         }
-
     };
 
     onError = function (errorCode, message) {

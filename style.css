@@ -19,7 +19,7 @@ h4 {
 }
 
 #form {
-    max-width: 80vw !important;
+    max-width: 70vw !important;
     display: flex;
     flex-direction: column;
     gap: 1.8rem;
@@ -54,6 +54,7 @@ h4 {
 
 .input-form:focus, .input-form:hover {
     border-color: #555;
+    color: rgb(49, 48, 48);
 }
 
 .long {
