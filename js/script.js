@@ -89,10 +89,9 @@ validateEmail = (input, index) => {
 };
 
 validateCNPJ = (input, index) => {
-    let regexp = /^\d{2}\.\d{3}\.\d{3}\/\d{4}\-\d{2}$/;
+    let regexp = /^\d{2}\.\d{3}\.\d{3}\/\d{4}\-\d{2}$/
 
     let cnpj = input.value;
-
     if (!regexp.test(cnpj)) {
         const errorMessage = `<i class="fa fa-info-circle"></i> Digite um CNPJ válido*`;
         input.style.borderColor = "rgba(243, 10, 10, 0.375)";
